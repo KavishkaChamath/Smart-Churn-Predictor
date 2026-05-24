@@ -1,8 +1,13 @@
+
+# Ignore Python cache
 __pycache__/
 *.pyc
+
+# Ignore notebook checkpoints
 .ipynb_checkpoints/
 
-models/*.pkl
+# Ignore temporary files
+.DS_Store
 
-venv/
-.env/
+# models/
+# *.pkl
