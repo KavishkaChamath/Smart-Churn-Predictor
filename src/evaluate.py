@@ -154,6 +154,8 @@ results_df = pd.DataFrame(results)
 print("\n\n===== FINAL MODEL COMPARISON =====")
 print(results_df.sort_values(by="ROC-AUC", ascending=False))
 
+results_df.to_csv("models/model_results.csv", index=False)
+
 # # -----------------------------
 # # FINAL ROC CURVE
 # # # -----------------------------
