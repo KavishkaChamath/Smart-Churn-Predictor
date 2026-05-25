@@ -16,8 +16,11 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 # -----------------------------
 # LOAD DATA
 # -----------------------------
-DATA_PATH = "/kaggle/working/Smart-Churn-Predictor/data/processed/processed_churn.csv"
+BASE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(BASE_PATH, "data", "processed", "processed_churn.csv")
 df = pd.read_csv(DATA_PATH)
+
+
 
 # -----------------------------
 # SPLIT DATA
@@ -53,7 +56,7 @@ models = {
 # -----------------------------
 # SAVE FOLDER
 # -----------------------------
-model_path = "/kaggle/working/Smart-Churn-Predictor/models"
+model_path = os.path.join(BASE_PATH, "models")
 os.makedirs(model_path, exist_ok=True)
 
 # -----------------------------

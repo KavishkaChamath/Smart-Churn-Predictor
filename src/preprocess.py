@@ -5,9 +5,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 
-BASE_PATH = "/kaggle/working/Smart-Churn-Predictor"
-RAW_DATA_PATH = "/kaggle/input/datasets/blastchar/telco-customer-churn/WA_Fn-UseC_-Telco-Customer-Churn.csv"
-PROCESSED_PATH = os.path.join(BASE_PATH, "data/processed/processed_churn.csv")
+BASE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RAW_DATA_PATH = os.path.join(BASE_PATH, "data", "raw", "WA_Fn-UseC_-Telco-Customer-Churn.csv")
+PROCESSED_PATH = os.path.join(BASE_PATH, "data", "processed", "processed_churn.csv")
 
 # -----------------------------
 # LOAD DATA
